@@ -20,15 +20,15 @@ const SafeArea = styled(SafeAreaView)`
 `;
 
 const SearchContainer = styled.View`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 //kinda like instantiating a specifiv version of a View element
 //as this new name "RestaurantListContainer"
 const RestaurantListContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  background-color: blue;
+  padding: ${(props) => props.theme.space[3]};
+  background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 
 
@@ -44,14 +44,3 @@ export const RestaurantsScreen = () => (
     </SafeArea>
   </SafeAreaProvider>
 )
-
-const styles = StyleSheet.create({
-  search: {
-    
-  },
-  list: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "blue",
-  },
-});
